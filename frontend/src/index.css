@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+/* Design tokens (docs/frontend.md §5). Tailwind turns each --color-* into utilities,
+   e.g. bg-brand-700, text-risk-high. */
+@theme {
+  --font-sans: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-500: #4f5bd5;
+  --color-brand-600: #3b47c4;
+  --color-brand-700: #2e3a9f;
+  --color-brand-800: #1e2a78;
+  --color-brand-900: #141c52;
+
+  /* Risk colours are ALWAYS paired with an icon and a text label. */
+  --color-risk-low: #15803d;
+  --color-risk-low-bg: #dcfce7;
+  --color-risk-medium: #a16207;
+  --color-risk-medium-bg: #fef3c7;
+  --color-risk-high: #c2410c;
+  --color-risk-high-bg: #ffedd5;
+  --color-risk-critical: #b91c1c;
+  --color-risk-critical-bg: #fee2e2;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-100 text-slate-800 antialiased;
+  }
+
+  /* Visible keyboard focus everywhere (accessibility). */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}

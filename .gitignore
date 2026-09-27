@@ -1,0 +1,50 @@
+# ---------- Python ----------
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Django ----------
+backend/staticfiles/
+backend/media/
+*.log
+logs/
+
+# ---------- ML artefacts (regenerate with scripts/train_model.py) ----------
+*.pkl
+*.joblib
+ml-service/models/*.json
+!ml-service/models/.gitkeep
+
+# ---------- Data (generated; small samples are kept) ----------
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ---------- Node / React ----------
+node_modules/
+frontend/dist/
+frontend/coverage/
+npm-debug.log*
+
+# ---------- Editors / OS ----------
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------- Local database fallback ----------
+*.sqlite3

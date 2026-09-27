@@ -1,0 +1,17 @@
+# python -m coverage run manage.py test && python -m coverage report   (HTML: python -m coverage html -> htmlcov/)
+[run]
+branch = True
+source = .
+omit =
+    venv/*
+    */migrations/*
+    */tests.py
+    */test_*.py
+    manage.py
+    config/asgi.py
+    config/wsgi.py
+
+[report]
+skip_empty = True
+show_missing = True
+sort = Cover
